@@ -1,0 +1,8 @@
+Component	Arduino Nano
+Dust sensor TX	                 D2
+Dust sensor RX	                 D3
+DHT11 data	                     D7
+Red LED through resistor	       D5
+Green LED through resistor	     D6
+I²C LCD SDA	                     A4
+I²C LCD SCL                    	 A5
