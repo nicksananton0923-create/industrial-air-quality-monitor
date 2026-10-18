@@ -1,21 +1,110 @@
-🌫️ PM2.5 dust sensor readings over UART.
 
 
+1. Complete components list
 
-🌡️ DHT11 temperature and humidity monitoring.
+[Nano V3.0 ATmega328P 5V 16MHz CH340G USB Micro-controller Development Board Compatible to Arduino,Shenzhen HiLetgo Technology Co., Ltd](https://images.openai.com/static-rsc-4/lJcQ_ojOq94yvJF3qloIaSwHBd6d5fErAX7aWHCS8ZtyC00WFW1egPKLVdeu8gw9f-sWvBjYa1YnjbldV1jzrNkz1tsJhcIU5d1uxyJSVTzoK6zSUbFnDPVNNglQbOuIIce3EYitm0noytw0dFIMX1LKpLzmoMf4AjLkdBW0Arw?purpose=inline)
 
+1\. Arduino Nano
 
+Main controller — processes the sensor readings and controls the LCD and LEDs.
 
-📟 I²C LCD display.
+[Czujnik pyłu/czystości powietrza PM1.0 / PM2.5 / PM10 - PMS5003 - 5V UART Sklep Botland](https://images.openai.com/static-rsc-4/moaVphq6DfvGhg99occVl2f7QBGD1jLEWd1NPsFm1ly8QClfX3uMSI3fPKV_Ie72qaAfpvMbs3r-tXmm2jf2PjwkT8XqAKCtcgYS9q2zs_8WEy3K0l8SN9jIAymyUNllikS8VWVy3i-LuvarigDon-z-jql9Xnp91Z5Xz-Ma7DQ?purpose=inline)
 
+2\. PM2.5 UART dust sensor
 
+Measures airborne particulate matter. Confirm the exact sensor model before using the code.
 
-🔴 Red and 🟢 green status LEDs.
+[DHT11 Temperature-Humidity Sensor](https://images.openai.com/static-rsc-4/x_c63HQzCNfF5l68i9JIiLQJSo9ZaN4zLMfr1o3cu3OJ8-_wy1r1KihPMwX8ACn75paJNXaZGox-fuqe1YPRFix3PflQSMG2NH2vb5f723_NwKjerOvqdbtcC8io8tAtpKu1bGVm74dyPSXgrx1qhltYIrLORE-tiQXkhNjJPp4?purpose=inline)
 
+3\. DHT11 sensor
 
+Measures temperature and relative humidity.
 
-⏱️ A reading update every five seconds.
+[LCD1602 I2C Display Module with Backlight, 16x2 Blue Character LCD for Raspberry Pi, Arduino, ESP32, 3.3V/5V Compatible (32 Characters, I2C Interface)](https://images.openai.com/static-rsc-4/9LqU0ciEXMEx-UKq7YAaVEYn8ktX15l3PrvJemg18R_QIDp5IMpLAbDmkd921qlfn6_GMMXkRiJcWX2b8bdPTWchZ5oIXDfVOpxtUhdFKVh0f3T8wOjgKYhgVT9dzGJbqim5ZQ4kFi5KpzO6kyemdM9JjTQCY2rI39GH6hGyPsc?purpose=inline)
 
+4\. 16×2 LCD with I²C module
 
+Displays PM2.5, temperature, humidity and warning status.
 
-⚠️ A configurable PM2.5 warning threshold.
+[P1835J](https://images.openai.com/static-rsc-4/khXGazwFQ9SaWEnB3PjqqJiMhf4hlEuQ1xdN2M8TV61a9h6gVKCqjTcnwGIDQOfkvUiEKQuWpIyHR5A-vnLI8HOo2yO6eDxh-dZzUilatxBvi8MvvnyR8xZbzCm-rnx0xjN6TWw845WQPQAk3jRl_TfwzPwMmxqD7qqeYDhhhzk?purpose=inline)
+
+5\. 3.7 V rechargeable lithium battery
+
+Portable power supply. Choose a cell with suitable capacity and protection.
+
+[Lithium Battery Charger and Protection Module 1A USB-C - TP4056](https://images.openai.com/static-rsc-4/IRKwiim6SLOqOnI-kalvFJ0lwKKtDmhQ9KsJzJp3dj6UzQiDvMi9RkmmV9bylrChkcJ8CYqq6IiSbUZTKgtDqcVPrdOd0g_CYuFXx69ICQ0XS-jz4F3paAW5uUs3E683rNGQei7MzyMHw9cKLUuuV7szoFd3uD8Jsvc8lbgMRdY?purpose=inline)
+
+6\. Lithium battery charging module
+
+A TP4056 module with battery protection is a common option for a single-cell 3.7 V Li-ion battery. Match it to your battery type.
+
+[Snapklik.com : 8Pcs LM2596 DC-DC Buck Converter High Efficiency Voltage Regulator Input 3.0V-40V Output 1.5V-35V Step Down Module](https://images.openai.com/static-rsc-4/6r6izr3-4ncaHEBZNYBnI1SXWa7RToVknuRQih15I7PwXu3rG0zkKF1dtVoP4I8A8s4OS8AmddJfTF-lmJcgQ-ODCzSF6irr8O8Mp_8NPU_-lZumYAi22yWjBMii71dy7SiUlCKMryTuNYNecSSKXHSmqhINsD1PaA75MpKTemY?purpose=inline)
+
+7\. DC–DC buck converter
+
+Converts the battery voltage to a regulated supply suitable for the electronics.
+
+[830 Point Breadboard Full Size Solderless WHITE Prototyping Test Circuit Board Plug-In 830 Tie Points Pin For Arduino Project Board Cables Connectors DIY - Multi Plug - Multi Plug](https://images.openai.com/static-rsc-4/fCfsnnYm6jLPN9BgmDdyJ6OmOEIW1BYzpCEnUXrOTTBzVmwJbcFZiuH28TZb705B3JRzPGV7OgHObxHkyT9EXHfn4Bx5RvkUNhsXpvBvAPnVi9PjejiiBYfxRY7sifpg7srbGtNU7mGE6_smQszmGoYfbgjMJWaiN68qqitkezQ?purpose=inline)
+
+8\. Breadboard
+
+For assembling and testing the circuit without soldering.
+
+[Dupont Cable 10CM Male to Male + Male to Female an...  –  Vicedeal](https://images.openai.com/static-rsc-4/b15hT4g5mogg4eE7PD6UOjzOt5xwsMzHGLnas-DfTegjP9XovOO0IIVOxCeoi2nDokY11STRxb6uB4VF2UF8FT5xv7HQf-4KuB6InrpSoYcf7UznyawMwjOi7VYY2bOFcGXCyoZMYfAYQiXuWmTC0haXMlGqfUXGVHIskFfhyXY?purpose=inline)
+
+9\. Jumper wires
+
+Male–male and male–female wires for connecting modules.
+
+[Header Female 2 Pin 2.54mm (10 Pack) - Micro Robotics](https://images.openai.com/static-rsc-4/jYzylZGbiYLRjm_RK4C6xmnrgceRy6Fm6UfJF64CbdIng5JedtmkKVSyKUiDJnmfYPZaH8ode4RRUZqF2TRj31LiUSI_RbreDcti64dGu2iXXQySPcStkkZWOoYqkoysGR3uuCe050QuhtNeag9V1CTbXQN76600tOxmNUPKQ6M?purpose=inline)
+
+10\. Female pin headers / connectors
+
+For removable module connections where the component pins require them.
+
+[SRB22A2FBBNN ZF Electronics | Rocker Switches | DigiKey](https://images.openai.com/static-rsc-4/PO5xi1noGbFXkzhn99GJswNBEx7z_m63GUjJzfAxlPl1mkwewRgBYUgSGmR5sNEZHIU47BNrRkWqlV-wF7QPs1y9CgIE7TP64l1xVdIhz30FTVo5r0dxFSX_hBeweKS_LWKzYDaTz-WkrmHPj4nAfsJPb0KHOav2DzviSjgJXAY?purpose=inline)
+
+11\. ON/OFF switch
+
+Turns the device on and off. Select a switch rated for the circuit current.
+
+[100 Pcs 5mm LED (White, Red, Blue, Yellow, Green 20 Each) 100 Pcs 220E Resistor](https://images.openai.com/static-rsc-4/-7RM8TZdVt8g1SahxDfXamK340nS0_QN3sv3P02cooy-VKmQ6ZigBtWWXOwFXdzyysc47PA3ejmaN6QnMgYxOujGqdSugKUv3Yjf1uMHx6jsPox6sNkOQFJ8AMEJ6y-IMWsUGwOsjyvs6MlwAIbqAGEVLo68Zg1_RT4ro3p_aQA?purpose=inline)
+
+12\. Red and green LEDs with resistors
+
+Green indicates normal status; red indicates a PM2.5 warning.
+
+## 2. Power supply wiring 🔋
+
+3.7 V lithium battery
+
+Protected charging module (TP4056)
+
+USB charging input
+
+ON/OFF switch → Buck converter
+
+Set and measure the required output voltage first
+
+Arduino Nano + sensors + LCD
+
+Important safety notes:
+
+- A buck converter only reduces voltage; it cannot boost a battery voltage that has fallen below the required output. A 3.7 V battery is about 4.2 V when fully charged and decreases during discharge, so check whether your chosen converter can maintain the required output.
+- Never connect the battery directly to the Arduino's 5 V pin. Verify the converter output with a multimeter before connecting the board.
+- Confirm the dust sensor's required voltage and current. Some sensors need more current than a small battery or converter can reliably provide.
+- Do not assume the charging module supports powering the device while charging. Use a suitable power-path circuit if simultaneous operation and charging are required.
+
+## 3. Features to include in your GitHub README
+
+- 🌫️ UART-based PM2.5 dust monitoring
+- 🌡️ DHT11 temperature and humidity monitoring
+- 📟 I²C LCD real-time display
+- 🔴🟢 Two-LED status indication
+- ⏱️ Readings updated every five seconds
+- ⚠️ Adjustable PM2.5 warning threshold
+- 🔋 Rechargeable 3.7 V battery supply
+- ⚡ Buck converter voltage regulation
+- 🔌 ON/OFF switch and breadboard-based prototyping
+- 🔧 Modular connectors and jumper-wire connections
+
