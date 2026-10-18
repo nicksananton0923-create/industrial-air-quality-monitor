@@ -1,0 +1,21 @@
+🌫️ PM2.5 dust sensor readings over UART.
+
+
+
+🌡️ DHT11 temperature and humidity monitoring.
+
+
+
+📟 I²C LCD display.
+
+
+
+🔴 Red and 🟢 green status LEDs.
+
+
+
+⏱️ A reading update every five seconds.
+
+
+
+⚠️ A configurable PM2.5 warning threshold.
