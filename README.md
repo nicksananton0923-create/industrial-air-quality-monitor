@@ -74,8 +74,8 @@ The value is a configurable demonstration threshold expressed in micrograms per 
  📂 Existing Project Documentation
 
 - [Component list and notes](<Component>)
-- [Connection terminals](<Connections terminals>)
-- [Library notes](<Manage Libraries.>)
+- [Connection terminals](Connections%20terminals)
+- [Library notes](Manage%20Libraries.)
 - [Diagram image](<Diagram.jpg>)
 
 These links retain the existing repository paths.
